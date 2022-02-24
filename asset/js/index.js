@@ -1,7 +1,7 @@
 const randomIndex = function (length) {
   return Math.floor(Math.random() * length);
 };
-let output= "";
+let output = "";
 const fetchData = async function () {
   try {
     const response = await fetch('https://thatcopy.pw/catapi/rest/');
@@ -11,7 +11,7 @@ const fetchData = async function () {
     const data = await response.json();
     const character = data[randomIndex(data.length)];
     console.log(data);
-   output = `
+    output = `
        <h1>ID:${data.id}</h1>
        <img src="${data.url}" alt="Images of ${data.id}">
       <p>X: ${data.x}</p>
